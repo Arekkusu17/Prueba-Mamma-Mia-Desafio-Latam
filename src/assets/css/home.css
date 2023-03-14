@@ -1,0 +1,13 @@
+.home-banner {
+  height: 20vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color:white;
+  /* flex-direction: row; add this property to display the div horizontally */
+  background-image: url("../img/jon-tyson-Gp1bS0WTw3w-unsplash.jpg");
+}
+ 

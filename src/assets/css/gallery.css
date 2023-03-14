@@ -1,0 +1,35 @@
+.ingredient-list{
+  list-style:none;
+  text-transform: capitalize;
+}
+
+.ingredient-list:before{
+  content: '🍕'
+}
+
+.card{
+  width: 18rem;
+}
+.card-title{
+  text-transform: capitalize;
+}
+
+.galeria{
+  padding: 3rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap:1rem
+}
+
+
+
+.buttons {
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+}
