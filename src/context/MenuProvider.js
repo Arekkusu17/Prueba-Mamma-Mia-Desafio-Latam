@@ -10,7 +10,7 @@ const MenuProvider = ({ children }) => {
     const getMenuData = async () => {
       const response = await axios.get("/pizzas.json");
       setMenuList(response.data)
-      console.log(response.data)
+
     };
     getMenuData()
   }, [])
