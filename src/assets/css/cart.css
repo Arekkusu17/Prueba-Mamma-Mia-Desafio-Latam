@@ -4,7 +4,7 @@
     flex-direction: column;
     /* height: 80vh; */
     padding: 1.5rem;
-    background: #f5eded;
+    /* background: #f5eded; */
 }
 
 .order-resume{
@@ -25,6 +25,19 @@
   padding: 5px;
 }
 
+@media screen and (max-width:425px) {
+  .item-name{
+    display: none;
+  }
+}
+
+
+@media screen and (max-width:425px) {
+  .cart-section{
+    margin: 0.5rem;
+    justify-content: center;
+  }
+}
 
 
 @media screen and (max-width:635px) {
