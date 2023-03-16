@@ -1,4 +1,5 @@
 import React from "react";
+import Swal from 'sweetalert2'
 import { useNavigate } from "react-router-dom";
 import "../assets/css/gallery.css";
 import { CartContext } from "../context/CartProvider";
@@ -20,6 +21,21 @@ export default function Gallery() {
     navigate(`/pizza/${id}`)
   }
 
+  // FROM SWEET ALERT 2 DOCUMENTATION
+  const Toast = Swal.mixin({
+    toast: true,
+    position: 'bottom-start',
+    showConfirmButton: false,
+    timer: 1500,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }
+  })
+
+
+
   return (
 
     <div className="galeria grid-columns-home">
@@ -39,7 +55,13 @@ export default function Gallery() {
           </div>
           <div className="buttons">
             <button className="btn btn-primary" onClick={() => { handleClickViewMore(pizza.id) }}>Ver Más 👀</button>
-            <button className="btn btn-danger" onClick={() => { handleClickAddItem(pizza.id) }}> Añadir 🛒</button>
+            <button className="btn btn-danger" onClick={() => {
+              handleClickAddItem(pizza.id);
+              Toast.fire({
+                icon: 'success',
+                title: 'Producto añadido al carrito'
+              })
+            }}> Añadir 🛒</button>
           </div>
         </div>
       ))

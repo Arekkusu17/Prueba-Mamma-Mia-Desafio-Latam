@@ -33,3 +33,11 @@
   width: 100%;
   justify-content: space-around;
 }
+
+
+@media screen and (max-width:992px) {
+  .galeria{
+    padding: 1rem;
+    justify-content: space-around;
+  }
+}
