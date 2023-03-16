@@ -11,3 +11,14 @@
   background-image: url("../img/jon-tyson-Gp1bS0WTw3w-unsplash.jpg");
 }
  
+.item-qty{
+  width: 24px;
+  text-align: center;
+}
+
+
+@media screen and (max-width:992px) {
+  .item-qty{
+    display: none;
+  }
+}
