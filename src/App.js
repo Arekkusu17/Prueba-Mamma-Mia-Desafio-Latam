@@ -6,6 +6,7 @@ import CartProvider from './context/CartProvider';
 import MenuProvider from './context/MenuProvider';
 import Cart from './views/Cart';
 import Home from './views/Home';
+import NotFound from './views/NotFound';
 import Product from './views/Product';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
               <Route path="/home" element={<Home />} />
               <Route path="/pizza/:id" element={<Product />} />
               <Route path="/carrito" element={<Cart />} />
+              <Route path='*' element={<NotFound />} />
             </Routes>
           </CartProvider>
         </MenuProvider>
