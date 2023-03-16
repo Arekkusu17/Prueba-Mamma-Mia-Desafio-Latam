@@ -21,13 +21,37 @@ export default function Cart() {
     return item ? item : {};
   }
 
+
+  // FROM SWEET ALERT 2 DOCUMENTATION
+  const Toast = Swal.mixin({
+    toast: true,
+    position: 'bottom-start',
+    showConfirmButton: false,
+    timer: 1500,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }
+  })
+
   const handleClickAddItem = (id) => {
-    addItemToCart(id)
+    addItemToCart(id);
+    Toast.fire({
+      icon: 'success',
+      title: 'Producto añadido al carrito'
+    })
   }
 
   const handleClickRemoveOneItem = (id) => {
-    decreaseItemFromCart(id)
+    decreaseItemFromCart(id);
+    Toast.fire({
+      icon: 'warning',
+      title: 'Producto removido del carrito'
+    })
   }
+
+
 
   const navigate = useNavigate()
   return (
