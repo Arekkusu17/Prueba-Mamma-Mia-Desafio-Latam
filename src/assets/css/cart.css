@@ -1,0 +1,34 @@
+.cart-section{
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    /* height: 80vh; */
+    padding: 1.5rem;
+    background: #f5eded;
+}
+
+.order-resume{
+  background: whitesmoke;
+}
+
+.order-item{
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+  border-bottom: 2px solid #b5b5b520;
+}
+.order-item img{
+  height: 100px;
+  padding: 5px;
+}
+
+
+
+@media screen and (max-width:635px) {
+  .price-per-item{
+    display: none;
+  }
+}
